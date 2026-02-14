@@ -44,6 +44,16 @@
               "ai-tools/claude-code",
               "ai-tools/windsurf"
             ]
+          },
+          {
+            "group": "Dogs",
+            "pages": [
+              "dogs/index",
+              "dogs/breeds",
+              "dogs/care",
+              "dogs/training",
+              "dogs/health"
+            ]
           }
         ]
       },
