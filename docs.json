@@ -44,6 +44,12 @@
               "ai-tools/claude-code",
               "ai-tools/windsurf"
             ]
+          },
+          {
+            "group": "Food guides",
+            "pages": [
+              "oatmeal"
+            ]
           }
         ]
       },
