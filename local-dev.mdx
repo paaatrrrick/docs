@@ -1,0 +1,203 @@
+---
+title: 'Local development'
+description: 'Set up and run Mintlify documentation locally for development'
+---
+
+<Info>
+  **Prerequisites**:
+  - Node.js version 19 or higher
+  - Git repository with documentation files
+  - Basic knowledge of command line operations
+</Info>
+
+This guide walks you through setting up a local development environment for your Mintlify documentation site.
+
+## Quick setup
+
+<Steps>
+<Step title="Install Mintlify CLI">
+
+Install the Mintlify CLI globally using npm:
+
+```bash
+npm install -g mint
+```
+
+</Step>
+
+<Step title="Clone your repository">
+
+Clone your documentation repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/your-docs-repo.git
+cd your-docs-repo
+```
+
+</Step>
+
+<Step title="Start the development server">
+
+Navigate to your docs directory and start the local server:
+
+```bash
+mint dev
+```
+
+Your documentation will be available at `http://localhost:3000`.
+
+</Step>
+</Steps>
+
+## Development workflow
+
+### Making changes
+
+1. Edit your MDX files in your preferred text editor
+2. Changes are automatically reflected in the browser
+3. The development server supports hot reloading for instant feedback
+
+### Working with images
+
+Place images in the `/images` directory and reference them in your MDX files:
+
+```markdown
+![Alt text](/images/your-image.png)
+```
+
+### Testing navigation
+
+Your navigation structure is defined in `docs.json`. After making changes:
+
+1. Restart the development server
+2. Verify all links work correctly
+3. Check that new pages appear in the navigation
+
+## Development server options
+
+### Custom port
+
+Run on a different port using the `--port` flag:
+
+```bash
+mint dev --port 8080
+```
+
+### Environment variables
+
+Set development-specific variables in a `.env.local` file:
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+## Validating your documentation
+
+### Check for broken links
+
+Validate all internal and external links:
+
+```bash
+mint broken-links
+```
+
+### Preview production build
+
+Test how your docs will appear in production:
+
+```bash
+mint build
+mint preview
+```
+
+## File watching and hot reload
+
+The development server automatically watches for changes in:
+
+- MDX files
+- Configuration files (`docs.json`, `mint.json`)
+- Image assets
+- Custom CSS files
+
+Changes trigger an automatic browser refresh.
+
+## Working with components
+
+### Built-in components
+
+Mintlify provides several built-in components you can use:
+
+```mdx
+<Info>
+Information callout
+</Info>
+
+<Warning>
+Warning message
+</Warning>
+
+<Steps>
+<Step title="Step title">
+Step content
+</Step>
+</Steps>
+```
+
+### Custom components
+
+Create custom React components in a `/components` directory and import them in your MDX files.
+
+## Debugging common issues
+
+<AccordionGroup>
+  <Accordion title="Port already in use">
+    If port 3000 is occupied, Mintlify automatically tries the next available port. You'll see a message like:
+    
+    ```
+    Port 3000 is already in use. Trying 3001 instead.
+    ```
+  </Accordion>
+
+  <Accordion title="Changes not reflecting">
+    1. Check that you saved your files
+    2. Ensure you're editing the correct file path
+    3. Try refreshing the browser manually
+    4. Restart the development server if needed
+  </Accordion>
+
+  <Accordion title="Images not loading">
+    1. Verify images are in the `/images` directory
+    2. Check the file path in your MDX file
+    3. Ensure image file names don't contain spaces or special characters
+  </Accordion>
+</AccordionGroup>
+
+## Best practices
+
+### File organization
+
+```
+your-docs/
+├── docs.json          # Main configuration
+├── index.mdx          # Homepage
+├── guides/           # Guide pages
+├── api-reference/    # API documentation  
+├── images/           # Static assets
+└── components/       # Custom components
+```
+
+### Version control
+
+- Commit changes frequently during development
+- Use descriptive commit messages
+- Create feature branches for major documentation updates
+- Test locally before pushing to main branch
+
+### Performance tips
+
+- Optimize images before adding them
+- Use relative links for internal navigation
+- Keep MDX files focused and well-organized
+- Test on different devices and screen sizes
+
+Ready to deploy your changes? See our [deployment guide](/development#deployment) for production deployment steps.
