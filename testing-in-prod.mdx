@@ -1,0 +1,203 @@
+---
+title: 'Testing in production'
+description: 'Best practices and strategies for safe testing in production environments'
+---
+
+<Info>
+  **Prerequisites**:
+  - Deployed application in production
+  - Monitoring and observability tools in place
+  - Rollback procedures established
+</Info>
+
+Testing in production is a practice that involves running tests and experiments against your live production environment. While it may seem counterintuitive, when done correctly, it provides invaluable insights into how your application behaves under real-world conditions.
+
+## Why test in production?
+
+Production environments have unique characteristics that are impossible to fully replicate in staging:
+
+- Real user traffic patterns
+- Actual data volumes and complexity
+- Production infrastructure and dependencies
+- Network conditions and latency
+- Third-party service interactions
+
+## Safe testing strategies
+
+<Steps>
+<Step title="Start with read-only operations">
+
+Begin with tests that only read data and don't modify system state:
+
+```javascript
+// Safe read-only test
+const healthCheck = async () => {
+  const response = await fetch('/api/health');
+  return response.status === 200;
+};
+```
+
+</Step>
+
+<Step title="Use feature flags">
+
+Control test exposure with feature flags to limit impact:
+
+```javascript
+if (featureFlags.isEnabled('prod-testing')) {
+  // Run production test
+  await runProductionTest();
+}
+```
+
+</Step>
+
+<Step title="Implement circuit breakers">
+
+Add safeguards to automatically stop tests if errors occur:
+
+```javascript
+const circuitBreaker = new CircuitBreaker(testFunction, {
+  timeout: 3000,
+  errorThresholdPercentage: 50,
+  resetTimeout: 30000
+});
+```
+
+</Step>
+</Steps>
+
+## Monitoring and observability
+
+Essential monitoring for production testing:
+
+<CardGroup cols={2}>
+  <Card title="Error rates" icon="exclamation-triangle">
+    Monitor error rates before, during, and after tests
+  </Card>
+  <Card title="Response times" icon="clock">
+    Track latency changes during test execution
+  </Card>
+  <Card title="Resource usage" icon="server">
+    Watch CPU, memory, and disk usage patterns
+  </Card>
+  <Card title="User impact" icon="users">
+    Measure effects on real user experiences
+  </Card>
+</CardGroup>
+
+## Testing techniques
+
+### Canary testing
+
+Deploy changes to a small subset of users:
+
+```yaml
+# Example canary configuration
+canary:
+  percentage: 5
+  duration: 30m
+  success_criteria:
+    error_rate: < 1%
+    response_time: < 500ms
+```
+
+### A/B testing
+
+Compare different versions with real users:
+
+```javascript
+const variant = getUserVariant(userId);
+if (variant === 'experimental') {
+  return experimentalFeature();
+} else {
+  return currentFeature();
+}
+```
+
+### Chaos engineering
+
+Intentionally introduce failures to test resilience:
+
+<Warning>
+  Only perform chaos engineering during planned maintenance windows or with proper safeguards.
+</Warning>
+
+```python
+# Example chaos test
+def test_database_failure():
+    with chaos_context(target="database", failure_type="timeout"):
+        response = make_api_call()
+        assert response.status_code == 503
+```
+
+## Best practices
+
+<AccordionGroup>
+  <Accordion title="Plan your tests carefully">
+    
+    - Define clear objectives and success criteria
+    - Identify potential risks and mitigation strategies
+    - Prepare rollback procedures
+    - Schedule tests during low-traffic periods when possible
+    
+  </Accordion>
+
+  <Accordion title="Start small and scale gradually">
+    
+    - Begin with minimal user exposure
+    - Increase scope only after proving safety
+    - Test one change at a time
+    - Monitor continuously throughout the process
+    
+  </Accordion>
+
+  <Accordion title="Maintain data integrity">
+    
+    - Use synthetic data when possible
+    - Implement data cleanup procedures
+    - Avoid modifying critical user data
+    - Keep audit trails of all changes
+    
+  </Accordion>
+
+  <Accordion title="Communicate with your team">
+    
+    - Notify team members before testing
+    - Share test results and learnings
+    - Document incidents and resolutions
+    - Update runbooks based on findings
+    
+  </Accordion>
+</AccordionGroup>
+
+## Recovery procedures
+
+Always have a recovery plan:
+
+1. **Immediate rollback**: Quick revert to previous stable state
+2. **Circuit breaker activation**: Automatic test termination on errors  
+3. **Traffic diversion**: Route users away from affected systems
+4. **Data restoration**: Restore any corrupted or modified data
+
+```bash
+# Example rollback script
+#!/bin/bash
+echo "Initiating emergency rollback..."
+kubectl rollout undo deployment/app-deployment
+kubectl wait --for=condition=ready pod -l app=myapp
+echo "Rollback completed successfully"
+```
+
+## Tools and frameworks
+
+Popular tools for production testing:
+
+- **LaunchDarkly**: Feature flag management
+- **Optimizely**: A/B testing platform  
+- **Chaos Monkey**: Netflix's chaos engineering tool
+- **Gremlin**: Comprehensive chaos engineering platform
+- **Datadog**: Monitoring and observability
+- **New Relic**: Application performance monitoring
+
+Testing in production, when executed thoughtfully, provides unmatched insights into your application's real-world performance and helps build more resilient systems.
