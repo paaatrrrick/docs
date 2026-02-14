@@ -1,0 +1,273 @@
+---
+title: Testing apps
+description: Best practices for testing your applications
+icon: flask
+---
+
+## Overview
+
+Testing is essential for building reliable applications. This guide covers different testing strategies and tools to help you implement effective testing practices.
+
+## Types of testing
+
+### Unit testing
+
+Unit tests verify individual functions or components in isolation. They're fast to run and easy to debug.
+
+```javascript test.js
+function add(a, b) {
+  return a + b;
+}
+
+// Unit test
+describe('add function', () => {
+  test('adds two numbers correctly', () => {
+    expect(add(2, 3)).toBe(5);
+  });
+});
+```
+
+### Integration testing
+
+Integration tests verify that different parts of your application work together correctly.
+
+```javascript integration-test.js
+const request = require('supertest');
+const app = require('../app');
+
+describe('API integration', () => {
+  test('GET /users returns user data', async () => {
+    const response = await request(app)
+      .get('/users/1')
+      .expect(200);
+    
+    expect(response.body).toHaveProperty('id', 1);
+  });
+});
+```
+
+### End-to-end testing
+
+End-to-end tests simulate real user interactions with your application.
+
+```javascript e2e-test.js
+const { test, expect } = require('@playwright/test');
+
+test('user can log in', async ({ page }) => {
+  await page.goto('/login');
+  await page.fill('#username', 'testuser');
+  await page.fill('#password', 'password123');
+  await page.click('#login-button');
+  
+  await expect(page).toHaveURL('/dashboard');
+});
+```
+
+## Testing frameworks
+
+### JavaScript/TypeScript
+
+- **Jest** - Popular testing framework with built-in assertions and mocking
+- **Vitest** - Fast testing framework designed for Vite projects
+- **Mocha** - Flexible testing framework with multiple assertion libraries
+- **Playwright** - End-to-end testing for modern web apps
+
+### Python
+
+- **pytest** - Simple and powerful testing framework
+- **unittest** - Built-in Python testing framework
+- **Selenium** - Web application testing automation
+
+### Other languages
+
+- **RSpec** (Ruby) - Behavior-driven testing framework
+- **JUnit** (Java) - Standard testing framework for Java applications
+- **Go testing** - Built-in testing package for Go
+
+## Best practices
+
+### Write testable code
+
+Structure your code to make testing easier:
+
+```javascript
+// Good: Pure function, easy to test
+function calculateTax(price, taxRate) {
+  return price * taxRate;
+}
+
+// Better: Dependency injection for external services
+function processPayment(paymentService, amount) {
+  return paymentService.charge(amount);
+}
+```
+
+### Follow the testing pyramid
+
+Balance different types of tests:
+
+1. **Many unit tests** - Fast, focused, reliable
+2. **Some integration tests** - Verify component interactions
+3. **Few end-to-end tests** - Cover critical user workflows
+
+### Test naming conventions
+
+Use descriptive test names that explain the scenario and expected outcome:
+
+```javascript
+// Good
+test('should return 404 when user is not found', () => {
+  // test code
+});
+
+// Better
+test('getUserById returns 404 error when user ID does not exist in database', () => {
+  // test code
+});
+```
+
+### Arrange, Act, Assert pattern
+
+Structure your tests clearly:
+
+```javascript
+test('shopping cart calculates total correctly', () => {
+  // Arrange
+  const cart = new ShoppingCart();
+  cart.addItem({ price: 10, quantity: 2 });
+  cart.addItem({ price: 5, quantity: 1 });
+  
+  // Act
+  const total = cart.getTotal();
+  
+  // Assert
+  expect(total).toBe(25);
+});
+```
+
+## Testing strategies
+
+### Test-driven development (TDD)
+
+Write tests before implementing functionality:
+
+1. Write a failing test
+2. Write minimal code to make it pass
+3. Refactor and improve
+4. Repeat
+
+### Behavior-driven development (BDD)
+
+Focus on user behavior and business requirements:
+
+```javascript
+describe('User authentication', () => {
+  describe('when user enters valid credentials', () => {
+    it('should redirect to dashboard', () => {
+      // test implementation
+    });
+  });
+  
+  describe('when user enters invalid credentials', () => {
+    it('should show error message', () => {
+      // test implementation
+    });
+  });
+});
+```
+
+## Continuous integration
+
+Set up automated testing in your CI/CD pipeline:
+
+```yaml .github/workflows/test.yml
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
+```
+
+## Test coverage
+
+Monitor test coverage to identify untested code:
+
+```javascript
+// Generate coverage report
+npm test -- --coverage
+
+// Set coverage thresholds
+{
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}
+```
+
+## Mocking and stubbing
+
+Use mocks to isolate code under test:
+
+```javascript
+// Mock external API
+const mockFetch = jest.fn();
+global.fetch = mockFetch;
+
+test('fetches user data', async () => {
+  mockFetch.mockResolvedValueOnce({
+    json: () => Promise.resolve({ id: 1, name: 'John' })
+  });
+  
+  const user = await fetchUser(1);
+  expect(user.name).toBe('John');
+});
+```
+
+## Performance testing
+
+Test application performance under load:
+
+```javascript
+const autocannon = require('autocannon');
+
+// Load testing
+autocannon({
+  url: 'http://localhost:3000',
+  connections: 10,
+  duration: 10
+}, (err, result) => {
+  console.log('Average requests per second:', result.requests.average);
+});
+```
+
+## Common testing pitfalls
+
+- **Testing implementation details** - Focus on behavior, not internal structure
+- **Flaky tests** - Ensure tests are reliable and deterministic
+- **Slow test suites** - Keep tests fast by using mocks and parallel execution
+- **Poor test maintenance** - Update tests when requirements change
+
+## Resources
+
+- [Testing best practices guide](https://testing.googleblog.com/)
+- [Test automation pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
+- [JavaScript testing frameworks comparison](https://2022.stateofjs.com/en-US/libraries/testing/)
