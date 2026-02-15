@@ -2,7 +2,7 @@
 name: "Content reviewer"
 trigger:
 	type: "cron"
-	schedule: "0 */6 * * *"
+	schedule: "0 */7 * * *"
 automerge: false
 ---
 	
