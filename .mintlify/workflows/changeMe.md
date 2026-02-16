@@ -2,7 +2,7 @@
 name: "Changelog generator"
 trigger:
 	type: "cron"
-	schedule: "0 0 * * 2"
+	schedule: "0 0 * * 0"
 repos:
 	- "paaatrrrick/personalwebsite"
 automerge: false
