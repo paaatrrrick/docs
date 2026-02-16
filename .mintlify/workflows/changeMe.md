@@ -1,11 +1,11 @@
 ---
 name: "Changelog generator"
 trigger:
-	type: "cron"
-	schedule: "0 0 * * 0"
+  type: "cron"
+  schedule: "0 0 * * 0"
 repos:
-	- "paaatrrrick/personalwebsite"
-	- "github.com/paaatrrrick/chemistryresearch"
+  - "paaatrrrick/personalwebsite"
+  - "github.com/paaatrrrick/chemistryresearch"
 automerge: false
 ---
 	
