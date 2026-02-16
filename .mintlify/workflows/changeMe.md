@@ -1,12 +1,15 @@
 ---
 name: "Changelog generator"
 trigger:
-	type: "cron"
-	schedule: "0 0 * * *"
+  type: "cron"
+  schedule: "0 0 * * 2"
 repos:
-	- "paaatrrrick/personalwebsite"
-	- "github.com/paaatrrrick/chemistryresearch"
-automerge: false
+  - "paaatrrrick/personalwebsite"
+  - "mintlify/server"
 ---
-	
-Create a PR on my docs that summarize the last two commits in both of these two PRs.
+
+Read every pull request merged in `mintlify/server` and `mintlify/mint`
+over the last week and update the change log. Use the update component.
+
+For changes to the `@mintlify/validation` package that might be a bug fix
+please highlight these bug fixes in the changelog under a bugfix entry.
