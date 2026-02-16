@@ -5,7 +5,6 @@ trigger:
   schedule: "0 0 * * 2"
 repos:
   - "paaatrrrick/personalwebsite"
-  - "mintlify/server"
 ---
 
 Read every pull request merged in `mintlify/server` and `mintlify/mint`
