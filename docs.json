@@ -22,12 +22,6 @@
             ]
           },
           {
-            "group": "Customization",
-            "pages": [
-              "essentials/navigation"
-            ]
-          },
-          {
             "group": "Writing content",
             "pages": [
               "essentials/images"
