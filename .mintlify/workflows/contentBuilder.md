@@ -1,5 +1,5 @@
 ---
-name: "Content reviewer"
+name: "Content reviewrrrrer"
 trigger:
 	type: "cron"
 	schedule: "0 */7 * * *"
