@@ -4,11 +4,11 @@ on:
   push: 
     - repo: "paaatrrrick/personalwebsite"
       branch: "main"
-    - repo: "paaatrrrick/chemistryResarch"
+    - repo: "paaatrrrick/chemistryresearch"
       branch: "myCoolBranch"
 context:
   - repo: "paaatrrrick/personalwebsite"
-  - repo: "paaatrrrick/chemistryResarch"
+  - repo: "paaatrrrick/chemistryresearch"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
