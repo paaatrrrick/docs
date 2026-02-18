@@ -35,6 +35,12 @@
               "ai-tools/claude-code",
               "ai-tools/windsurf"
             ]
+          },
+          {
+            "group": "Recipes",
+            "pages": [
+              "pizza"
+            ]
           }
         ]
       },
