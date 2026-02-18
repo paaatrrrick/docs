@@ -1,6 +1,6 @@
 ---
 name: "Changelog generator"
-on:
+trigger:
   push: 
     - repo: "paaatrrrick/personalwebsite"
       branch: "main"
