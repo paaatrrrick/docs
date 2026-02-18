@@ -1,5 +1,11 @@
 ---
 name: "Changelog generator"
+on:
+  push: 
+    - repo: "paaatrrrick/personalwebsite"
+      branch: "main"
+    - repo: "paaatrrrick/chemistryresearch"
+      branch: "myCoolBranchhhh"
 context:
   - repo: "paaatrrrick/personalwebsite"
   - repo: "paaatrrrick/chemistryresearch"
