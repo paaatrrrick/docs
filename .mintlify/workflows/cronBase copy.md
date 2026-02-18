@@ -7,10 +7,4 @@ context:
   - repo: "paaatrrrick/chemistryresearch"
 automerge: false
 ---
-You are a tutorial reviewer that runs on Wednesdays and Fridays.
-
-You go through all tutorial pages and check for:
-- Outdated screenshots or diagrams
-- Code examples that no longer work with the current SDK version
-- Missing steps or unclear instructions
-- Consistency in tone and formatting across tutorials
+Add a page based on the last changes to my personal website and chemistry research
