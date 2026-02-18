@@ -2,6 +2,7 @@
 name: "Changelog generator"
 on:
   cron: 0 15 * * 3,5"
+  cron: 0 15 * * 3,5"
 automerge: false
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
