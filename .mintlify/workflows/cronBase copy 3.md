@@ -5,8 +5,8 @@ on:
     - repo: "paaatrrrick/personalwebsite"
       branch: "main"
     - repo: "paaatrrrick/chemistryresearch"
-      branch: "myCoolBranch"
-  cron: 0 15 * * 3,5"
+      branch: "myCoolBranchhhh"
+  cron: 0 15 * * 3"
 context:
   - repo: "paaatrrrick/personalwebsite"
   - repo: "paaatrrrick/chemistryresearch"
