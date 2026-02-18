@@ -1,0 +1,49 @@
+---
+title: "Windsurf setup"
+description: "Configure Windsurf for your documentation workflow"
+icon: "wind"
+---
+
+Windsurf is an AI-powered code editor. This guide shows how to configure Windsurf for better results on technical writing tasks and using Mintlify components.
+
+## Prerequisites
+
+- Windsurf editor installed
+- Access to your documentation repository
+
+## Setup
+
+1. Open Windsurf and navigate to your documentation repository.
+2. (Optional) Add a rules file to train Windsurf on your documentation standards.
+
+## Create workspace rules
+
+Create a `.windsurfrules` file at the root of your documentation repository:
+
+```markdown
+# Mintlify documentation
+
+## Project context
+- Format: MDX files with YAML frontmatter
+- Config: docs.json for navigation, theme, settings
+- Components: Mintlify components
+
+## Writing standards
+- Second-person voice ("you")
+- Prerequisites at start of procedural content
+- Test all code examples before publishing
+- Match style and formatting of existing pages
+- Language tags on all code blocks
+- Alt text on all images
+- Relative paths for internal links
+
+## Frontmatter requirements
+- title: Clear, descriptive page title
+- description: Concise summary for SEO/navigation
+```
+
+## Tips for documentation tasks
+
+- Use Cascade for multi-file documentation updates
+- Reference existing pages when asking Windsurf to create new content
+- Ask Windsurf to verify internal links after making changes
