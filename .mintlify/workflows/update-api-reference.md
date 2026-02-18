@@ -2,7 +2,7 @@
 name: "update api reference"
 trigger:
 	type: "cron"
-	schedule: "*/10 * * * *" # Every 10 minutes
+	schedule: "*/45 * * * *" # Every 45 minutes
 automerge: false
 ---
 
