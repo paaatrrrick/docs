@@ -1,5 +1,5 @@
 ---
-name: "review tutorials"
+name: "review tutorial pages"
 trigger:
 	type: "cron"
 	schedule: "0 15 * * 3,5" # Every Wednesday and Friday at 3:00 PM

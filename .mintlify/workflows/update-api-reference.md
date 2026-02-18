@@ -1,5 +1,5 @@
 ---
-name: "update api docs"
+name: "update api reference"
 trigger:
 	type: "cron"
 	schedule: "*/10 * * * *" # Every 10 minutes

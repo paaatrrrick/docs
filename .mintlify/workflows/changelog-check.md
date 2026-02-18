@@ -1,5 +1,5 @@
 ---
-name: "check changelog"
+name: "changelog check"
 trigger:
 	type: "cron"
 	schedule: "0 */6 * * *" # Every 6 hours

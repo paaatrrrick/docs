@@ -1,5 +1,5 @@
 ---
-name: "audit config reference"
+name: "audit config ref"
 trigger:
 	type: "cron"
 	schedule: "0 0 1 * *" # Every 1st of the month at midnight

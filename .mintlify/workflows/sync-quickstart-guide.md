@@ -1,5 +1,5 @@
 ---
-name: "sync quickstart"
+name: "sync quickstart guide"
 trigger:
 	type: "cron"
 	schedule: "0 9 * * 1" # Every Monday at 9:00 AM
