@@ -6,7 +6,6 @@ on:
       branch: "main"
     - repo: "paaatrrrick/chemistryresearch"
       branch: "myCoolBranchhhh"
-  cron: 0 15 * * 3"
 context:
   - repo: "paaatrrrick/personalwebsite"
   - repo: "paaatrrrick/chemistryresearch"
