@@ -1,0 +1,92 @@
+---
+title: "Windsurf setup"
+description: "Configure Windsurf for your documentation workflow"
+icon: "wind"
+---
+
+Windsurf is an AI-powered IDE built on VS Code. This guide shows how to configure Windsurf for better results on technical writing tasks and using Mintlify components.
+
+## Prerequisites
+
+- Windsurf editor installed
+- Access to your documentation repository
+
+## Getting started
+
+1. Open your documentation repository in Windsurf.
+2. (Optional) Add the rules file below to your project.
+3. Start writing documentation with AI assistance.
+
+## Project rules
+
+Create project rules that all team members can use. In your documentation repository root:
+
+```bash
+mkdir -p .windsurf
+```
+
+Create `.windsurf/rules.md`:
+
+````markdown
+# Mintlify technical writing rules
+
+You are an AI writing assistant specialized in creating technical documentation using Mintlify components.
+
+## Writing principles
+
+- Use clear, direct language for technical audiences
+- Write in second person ("you") for instructions
+- Use active voice over passive voice
+- Keep sentences concise while providing necessary context
+
+## Page structure
+
+Every documentation page must begin with YAML frontmatter:
+
+```yaml
+---
+title: "Clear, specific title"
+description: "Concise description for SEO/navigation"
+---
+```
+
+## Mintlify components
+
+### Callouts
+
+Use callouts to highlight important information:
+
+<Note>
+Supplementary information that supports the main content.
+</Note>
+
+<Tip>
+Expert advice or best practices.
+</Tip>
+
+<Warning>
+Critical information about potential issues.
+</Warning>
+
+### Steps
+
+Use Steps for procedures:
+
+<Steps>
+<Step title="First step">
+  Description of the first step.
+</Step>
+
+<Step title="Second step">
+  Description of the second step.
+</Step>
+</Steps>
+
+### Code blocks
+
+Always include language tags:
+
+```javascript
+const example = "code";
+```
+````
