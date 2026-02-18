@@ -1,0 +1,56 @@
+---
+title: "Windsurf setup"
+description: "Configure Windsurf for your documentation workflow"
+icon: "wind"
+---
+
+Windsurf is Codeium's AI-powered IDE. This guide shows how to configure Windsurf for better results on technical writing tasks and using Mintlify components.
+
+## Prerequisites
+
+- Windsurf editor installed
+- Access to your documentation repository
+
+## Setup
+
+1. Open Windsurf and navigate to your documentation repository.
+2. (Optional) Add project rules to customize AI behavior for documentation tasks.
+
+## Project rules
+
+Create a `.windsurf/rules.md` file in your documentation repository root to define project-specific guidelines:
+
+```markdown
+# Mintlify documentation rules
+
+## Writing standards
+- Use second-person voice ("you")
+- Use sentence case for headings
+- Include prerequisites at the start of procedural content
+- Add language tags to all code blocks
+
+## Mintlify components
+- Use Steps for sequential procedures
+- Use Tabs for platform-specific content
+- Use CodeGroup for multi-language examples
+- Wrap images in Frame components
+
+## Content guidelines
+- Keep explanations concise and actionable
+- Include code examples that users can copy and run
+- Add alt text to all images
+- Use relative paths for internal links
+```
+
+## Tips for documentation tasks
+
+<Tip>
+Use Windsurf's Cascade feature to make changes across multiple documentation files at once.
+</Tip>
+
+### Common prompts
+
+- "Update all code examples to use the latest API version"
+- "Add missing alt text to images in this file"
+- "Convert this procedure to use Mintlify Steps component"
+- "Check this page for consistency with our style guide"
