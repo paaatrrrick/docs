@@ -23,6 +23,12 @@
             ]
           },
           {
+            "group": "Work experience",
+            "pages": [
+              "work/mintlify"
+            ]
+          },
+          {
             "group": "Writing content",
             "pages": [
               "essentials/images"
