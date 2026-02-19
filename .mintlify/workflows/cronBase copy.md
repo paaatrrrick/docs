@@ -3,7 +3,6 @@ name: "Changelog generator"
 on:
   push:
     - repo: "paaatrrrick/personalwebsite"
-      branch: "main"
 context:
   - repo: "paaatrrrick/chemistryresearch"
 automerge: false
