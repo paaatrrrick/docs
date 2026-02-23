@@ -25,7 +25,6 @@ context:
   - repo: "paaatrrrick/chemistryresearcha"
   - repo: "paaatrrrick/chemistryresearchb"
   - repo: "paaatrrrick/chemistryresearchd"
-  - repo: "paaatrrrick/chemistryresearchc"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
