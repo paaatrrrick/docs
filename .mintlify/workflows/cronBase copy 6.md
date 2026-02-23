@@ -13,16 +13,6 @@ on:
 context:
   - repo: "paaatrrrick/personalwebsite"
   - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearcha"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
