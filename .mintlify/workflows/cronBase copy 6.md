@@ -13,6 +13,7 @@ on:
 context:
   - repo: "paaatrrrick/personalwebsite"
   - repo: "paaatrrrick/chemistryresearch"
+  - repo: "paaatrrrick/chemistryresearch"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
