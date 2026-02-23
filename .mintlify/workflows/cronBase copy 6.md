@@ -23,8 +23,6 @@ context:
   - repo: "paaatrrrick/chemistryresearch"
   - repo: "paaatrrrick/chemistryresearch"
   - repo: "paaatrrrick/chemistryresearcha"
-  - repo: "paaatrrrick/chemistryresearchb"
-  - repo: "paaatrrrick/chemistryresearchd"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
