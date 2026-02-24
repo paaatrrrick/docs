@@ -1,6 +1,8 @@
 ---
-name: "Changelog generator"
+name: "Broken link checker"
 on:
-  cron: 0 15 * * 3,5"
+  cron: "0 9 * * 1"
+automerge: false
 ---
-Add a page about star wars to my documentation site
+
+Scan all pages in the docs for broken links, including internal cross-references, external URLs, and anchor links. Report any that return 404 or timeout, and open a PR that removes or updates the broken links.
