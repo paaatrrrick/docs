@@ -40,6 +40,12 @@
             "pages": [
               "star-wars/obi-wan-kenobi"
             ]
+          },
+          {
+            "group": "Game of Thrones",
+            "pages": [
+              "game-of-thrones/introduction"
+            ]
           }
         ]
       },
