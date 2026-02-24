@@ -3,17 +3,6 @@ name: "Changelog generator"
 on:
   push: 
     - repo: "paaatrrrick/personalwebsite"
-      branch: "main"
-    - repo: "paaatrrrick/chemistryresearch"
-      branch: "myCoolBranchhhh"
-    - repo: "paaatrrrick/chemistryresearch"
-      branch: "myCoolBranchhhh"
-    - repo: "paaatrrrick/chemistryresearch"
-      branch: "myCoolBranchhhh"
-context:
-  - repo: "paaatrrrick/personalwebsite"
-  - repo: "paaatrrrick/chemistryresearch"
-  - repo: "paaatrrrick/chemistryresearch"
 automerge: true
 ---
 You are a tutorial reviewer that runs on Wednesdays and Fridays.
