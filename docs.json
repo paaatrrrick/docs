@@ -44,7 +44,8 @@
           {
             "group": "Game of Thrones",
             "pages": [
-              "game-of-thrones/introduction"
+              "game-of-thrones/introduction",
+              "game-of-thrones/characters"
             ]
           }
         ]
