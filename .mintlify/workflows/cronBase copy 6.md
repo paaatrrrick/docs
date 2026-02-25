@@ -1,7 +1,7 @@
 ---
-name: "Changelog generator"
+name: "Language translator"
 on:
   push: 
     - repo: "https://github.com/paaatrrrick/docs"
 ---
-Create a new page about game of thrones
+translate all language changes to french
