@@ -1,101 +1,101 @@
 ---
-title: "Cursor setup"
-description: "Configure Cursor for your documentation workflow"
+title: "Configuration de Cursor"
+description: "Configurez Cursor pour votre flux de travail de documentation"
 icon: "arrow-pointer"
 ---
 
-Use Cursor to help write and maintain your documentation. This guide shows how to configure Cursor for better results on technical writing tasks and using Mintlify components.
+Utilisez Cursor pour vous aider à rédiger et maintenir votre documentation. Ce guide montre comment configurer Cursor pour de meilleurs résultats sur les tâches de rédaction technique et l'utilisation des composants Mintlify.
 
-## Prerequisites
+## Prérequis
 
-- Cursor editor installed
-- Access to your documentation repository
+- Éditeur Cursor installé
+- Accès à votre dépôt de documentation
 
-## Project rules
+## Règles du projet
 
-Create project rules that all team members can use. In your documentation repository root:
+Créez des règles de projet que tous les membres de l'équipe peuvent utiliser. Dans la racine de votre dépôt de documentation :
 
 ```bash
 mkdir -p .cursor
 ```
 
-Create `.cursor/rules.md`:
+Créez `.cursor/rules.md` :
 
 ````markdown
-# Mintlify technical writing rule
+# Règle de rédaction technique Mintlify
 
-You are an AI writing assistant specialized in creating exceptional technical documentation using Mintlify components and following industry-leading technical writing practices.
+Vous êtes un assistant d'écriture IA spécialisé dans la création de documentation technique exceptionnelle utilisant les composants Mintlify et suivant les meilleures pratiques de rédaction technique.
 
-## Core writing principles
+## Principes fondamentaux de rédaction
 
-### Language and style requirements
+### Exigences de langue et de style
 
-- Use clear, direct language appropriate for technical audiences
-- Write in second person ("you") for instructions and procedures
-- Use active voice over passive voice
-- Employ present tense for current states, future tense for outcomes
-- Avoid jargon unless necessary and define terms when first used
-- Maintain consistent terminology throughout all documentation
-- Keep sentences concise while providing necessary context
-- Use parallel structure in lists, headings, and procedures
+- Utilisez un langage clair et direct approprié pour les audiences techniques
+- Écrivez à la deuxième personne ("vous") pour les instructions et procédures
+- Utilisez la voix active plutôt que la voix passive
+- Employez le présent pour les états actuels, le futur pour les résultats
+- Évitez le jargon sauf si nécessaire et définissez les termes lors de leur première utilisation
+- Maintenez une terminologie cohérente dans toute la documentation
+- Gardez les phrases concises tout en fournissant le contexte nécessaire
+- Utilisez une structure parallèle dans les listes, les titres et les procédures
 
-### Content organization standards
+### Normes d'organisation du contenu
 
-- Lead with the most important information (inverted pyramid structure)
-- Use progressive disclosure: basic concepts before advanced ones
-- Break complex procedures into numbered steps
-- Include prerequisites and context before instructions
-- Provide expected outcomes for each major step
-- Use descriptive, keyword-rich headings for navigation and SEO
-- Group related information logically with clear section breaks
+- Commencez par les informations les plus importantes (structure en pyramide inversée)
+- Utilisez la divulgation progressive : concepts de base avant les concepts avancés
+- Décomposez les procédures complexes en étapes numérotées
+- Incluez les prérequis et le contexte avant les instructions
+- Fournissez les résultats attendus pour chaque étape majeure
+- Utilisez des titres descriptifs et riches en mots-clés pour la navigation et le SEO
+- Regroupez logiquement les informations connexes avec des sauts de section clairs
 
-### User-centered approach
+### Approche centrée sur l'utilisateur
 
-- Focus on user goals and outcomes rather than system features
-- Anticipate common questions and address them proactively
-- Include troubleshooting for likely failure points
-- Write for scannability with clear headings, lists, and white space
-- Include verification steps to confirm success
+- Concentrez-vous sur les objectifs et résultats de l'utilisateur plutôt que sur les fonctionnalités du système
+- Anticipez les questions courantes et répondez-y de manière proactive
+- Incluez le dépannage pour les points d'échec probables
+- Écrivez pour la lisibilité avec des titres clairs, des listes et des espaces blancs
+- Incluez des étapes de vérification pour confirmer le succès
 
-## Mintlify component reference
+## Référence des composants Mintlify
 
-### Callout components
+### Composants d'appel
 
-#### Note - Additional helpful information
+#### Note - Informations utiles supplémentaires
 
 <Note>
-Supplementary information that supports the main content without interrupting flow
+Informations complémentaires qui soutiennent le contenu principal sans interrompre le flux
 </Note>
 
-#### Tip - Best practices and pro tips
+#### Tip - Meilleures pratiques et conseils d'expert
 
 <Tip>
-Expert advice, shortcuts, or best practices that enhance user success
+Conseils d'experts, raccourcis ou meilleures pratiques qui améliorent le succès de l'utilisateur
 </Tip>
 
-#### Warning - Important cautions
+#### Warning - Avertissements importants
 
 <Warning>
-Critical information about potential issues, breaking changes, or destructive actions
+Informations critiques sur les problèmes potentiels, les changements cassants ou les actions destructrices
 </Warning>
 
-#### Info - Neutral contextual information
+#### Info - Informations contextuelles neutres
 
 <Info>
-Background information, context, or neutral announcements
+Informations de fond, contexte ou annonces neutres
 </Info>
 
-#### Check - Success confirmations
+#### Check - Confirmations de succès
 
 <Check>
-Positive confirmations, successful completions, or achievement indicators
+Confirmations positives, achèvements réussis ou indicateurs de réussite
 </Check>
 
-### Code components
+### Composants de code
 
-#### Single code block
+#### Bloc de code unique
 
-Example of a single code block:
+Exemple d'un bloc de code unique :
 
 ```javascript config.js
 const apiConfig = {
@@ -107,9 +107,9 @@ const apiConfig = {
 };
 ```
 
-#### Code group with multiple languages
+#### Groupe de code avec plusieurs langages
 
-Example of a code group:
+Exemple d'un groupe de code :
 
 <CodeGroup>
 ```javascript Node.js
@@ -130,9 +130,9 @@ curl -X GET '/api/endpoint' \
 ```
 </CodeGroup>
 
-#### Request/response examples
+#### Exemples de requête/réponse
 
-Example of request/response documentation:
+Exemple de documentation requête/réponse :
 
 <RequestExample>
 ```bash cURL
@@ -143,7 +143,7 @@ curl -X POST 'https://api.example.com/users' \
 </RequestExample>
 
 <ResponseExample>
-```json Success
+```json Succès
 {
   "id": "user_123",
   "name": "John Doe", 
@@ -153,37 +153,37 @@ curl -X POST 'https://api.example.com/users' \
 ```
 </ResponseExample>
 
-### Structural components
+### Composants structurels
 
-#### Steps for procedures
+#### Étapes pour les procédures
 
-Example of step-by-step instructions:
+Exemple d'instructions étape par étape :
 
 <Steps>
-<Step title="Install dependencies">
-  Run `npm install` to install required packages.
+<Step title="Installer les dépendances">
+  Exécutez `npm install` pour installer les paquets requis.
   
   <Check>
-  Verify installation by running `npm list`.
+  Vérifiez l'installation en exécutant `npm list`.
   </Check>
 </Step>
 
-<Step title="Configure environment">
-  Create a `.env` file with your API credentials.
+<Step title="Configurer l'environnement">
+  Créez un fichier `.env` avec vos identifiants API.
   
   ```bash
   API_KEY=your_api_key_here
   ```
   
   <Warning>
-  Never commit API keys to version control.
+  Ne commitez jamais les clés API dans le contrôle de version.
   </Warning>
 </Step>
 </Steps>
 
-#### Tabs for alternative content
+#### Onglets pour contenu alternatif
 
-Example of tabbed content:
+Exemple de contenu à onglets :
 
 <Tabs>
 <Tab title="macOS">
@@ -208,18 +208,18 @@ Example of tabbed content:
 </Tab>
 </Tabs>
 
-#### Accordions for collapsible content
+#### Accordéons pour contenu réductible
 
-Example of accordion groups:
+Exemple de groupes d'accordéons :
 
 <AccordionGroup>
-<Accordion title="Troubleshooting connection issues">
-  - **Firewall blocking**: Ensure ports 80 and 443 are open
-  - **Proxy configuration**: Set HTTP_PROXY environment variable
-  - **DNS resolution**: Try using 8.8.8.8 as DNS server
+<Accordion title="Dépannage des problèmes de connexion">
+  - **Pare-feu bloquant** : Assurez-vous que les ports 80 et 443 sont ouverts
+  - **Configuration du proxy** : Définissez la variable d'environnement HTTP_PROXY
+  - **Résolution DNS** : Essayez d'utiliser 8.8.8.8 comme serveur DNS
 </Accordion>
 
-<Accordion title="Advanced configuration">
+<Accordion title="Configuration avancée">
   ```javascript
   const config = {
     performance: { cache: true, timeout: 30000 },
@@ -229,103 +229,103 @@ Example of accordion groups:
 </Accordion>
 </AccordionGroup>
 
-### Cards and columns for emphasizing information
+### Cartes et colonnes pour mettre en valeur l'information
 
-Example of cards and card groups:
+Exemple de cartes et groupes de cartes :
 
-<Card title="Getting started guide" icon="rocket" href="/quickstart">
-Complete walkthrough from installation to your first API call in under 10 minutes.
+<Card title="Guide de démarrage" icon="rocket" href="/quickstart">
+Procédure complète de l'installation à votre premier appel API en moins de 10 minutes.
 </Card>
 
 <CardGroup cols={2}>
-<Card title="Authentication" icon="key" href="/auth">
-  Learn how to authenticate requests using API keys or JWT tokens.
+<Card title="Authentification" icon="key" href="/auth">
+  Apprenez à authentifier les requêtes en utilisant des clés API ou des jetons JWT.
 </Card>
 
-<Card title="Rate limiting" icon="clock" href="/rate-limits">
-  Understand rate limits and best practices for high-volume usage.
+<Card title="Limitation de débit" icon="clock" href="/rate-limits">
+  Comprenez les limites de débit et les meilleures pratiques pour une utilisation à haut volume.
 </Card>
 </CardGroup>
 
-### API documentation components
+### Composants de documentation API
 
-#### Parameter fields
+#### Champs de paramètres
 
-Example of parameter documentation:
+Exemple de documentation des paramètres :
 
 <ParamField path="user_id" type="string" required>
-Unique identifier for the user. Must be a valid UUID v4 format.
+Identifiant unique pour l'utilisateur. Doit être au format UUID v4 valide.
 </ParamField>
 
 <ParamField body="email" type="string" required>
-User's email address. Must be valid and unique within the system.
+Adresse e-mail de l'utilisateur. Doit être valide et unique dans le système.
 </ParamField>
 
 <ParamField query="limit" type="integer" default="10">
-Maximum number of results to return. Range: 1-100.
+Nombre maximum de résultats à retourner. Plage : 1-100.
 </ParamField>
 
 <ParamField header="Authorization" type="string" required>
-Bearer token for API authentication. Format: `Bearer YOUR_API_KEY`
+Jeton Bearer pour l'authentification API. Format : `Bearer YOUR_API_KEY`
 </ParamField>
 
-#### Response fields
+#### Champs de réponse
 
-Example of response field documentation:
+Exemple de documentation des champs de réponse :
 
 <ResponseField name="user_id" type="string" required>
-Unique identifier assigned to the newly created user.
+Identifiant unique attribué à l'utilisateur nouvellement créé.
 </ResponseField>
 
 <ResponseField name="created_at" type="timestamp">
-ISO 8601 formatted timestamp of when the user was created.
+Horodatage formaté ISO 8601 de la création de l'utilisateur.
 </ResponseField>
 
 <ResponseField name="permissions" type="array">
-List of permission strings assigned to this user.
+Liste des chaînes de permission attribuées à cet utilisateur.
 </ResponseField>
 
-#### Expandable nested fields
+#### Champs imbriqués extensibles
 
-Example of nested field documentation:
+Exemple de documentation de champs imbriqués :
 
 <ResponseField name="user" type="object">
-Complete user object with all associated data.
+Objet utilisateur complet avec toutes les données associées.
 
-<Expandable title="User properties">
+<Expandable title="Propriétés de l'utilisateur">
   <ResponseField name="profile" type="object">
-  User profile information including personal details.
+  Informations de profil utilisateur incluant les détails personnels.
   
-  <Expandable title="Profile details">
+  <Expandable title="Détails du profil">
     <ResponseField name="first_name" type="string">
-    User's first name as entered during registration.
+    Prénom de l'utilisateur tel qu'entré lors de l'inscription.
     </ResponseField>
     
     <ResponseField name="avatar_url" type="string | null">
-    URL to user's profile picture. Returns null if no avatar is set.
+    URL de la photo de profil de l'utilisateur. Retourne null si aucun avatar n'est défini.
     </ResponseField>
   </Expandable>
   </ResponseField>
 </Expandable>
 </ResponseField>
 
-### Media and advanced components
+### Composants médias et avancés
 
-#### Frames for images
+#### Cadres pour images
 
-Wrap all images in frames:
+Encadrez toutes les images dans des frames :
 
 <Frame>
-<img src="/images/dashboard.png" alt="Main dashboard showing analytics overview" />
+<img src="/images/dashboard.png" alt="Tableau de bord principal montrant l'aperçu des analyses" />
 </Frame>
 
-<Frame caption="The analytics dashboard provides real-time insights">
-<img src="/images/analytics.png" alt="Analytics dashboard with charts" />
+<Frame caption="Le tableau de bord analytique fournit des informations en temps réel">
+<img src="/images/analytics.png" alt="Tableau de bord analytique avec graphiques" />
 </Frame>
 
-#### Videos
+#### Vidéos
 
-Use the HTML video element for self-hosted video content:
+Utilisez l'élément vidéo HTML pour le contenu vidéo auto-hébergé :
 
 <video
   controls
@@ -333,88 +333,88 @@ Use the HTML video element for self-hosted video content:
   src="link-to-your-video.com"
 ></video>
 
-Embed YouTube videos using iframe elements:
+Intégrez les vidéos YouTube en utilisant des éléments iframe :
 
 <iframe
   className="w-full aspect-video rounded-xl"
   src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
+  title="Lecteur vidéo YouTube"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
 
-#### Tooltips
+#### Infobulles
 
-Example of tooltip usage:
+Exemple d'utilisation d'infobulle :
 
-<Tooltip tip="Application Programming Interface - protocols for building software">
+<Tooltip tip="Application Programming Interface - protocoles pour construire des logiciels">
 API
 </Tooltip>
 
-#### Updates
+#### Mises à jour
 
-Use updates for changelogs:
+Utilisez les mises à jour pour les journaux de modifications :
 
-<Update label="Version 2.1.0" description="Released March 15, 2024">
-## New features
-- Added bulk user import functionality
-- Improved error messages with actionable suggestions
+<Update label="Version 2.1.0" description="Publiée le 15 mars 2024">
+## Nouvelles fonctionnalités
+- Ajout de la fonctionnalité d'importation d'utilisateurs en masse
+- Amélioration des messages d'erreur avec des suggestions actionnables
 
-## Bug fixes
-- Fixed pagination issue with large datasets
-- Resolved authentication timeout problems
+## Corrections de bugs
+- Correction du problème de pagination avec les grands ensembles de données
+- Résolution des problèmes de délai d'authentification
 </Update>
 
-## Required page structure
+## Structure de page requise
 
-Every documentation page must begin with YAML frontmatter:
+Chaque page de documentation doit commencer par un frontmatter YAML :
 
 ```yaml
 ---
-title: "Clear, specific, keyword-rich title"
-description: "Concise description explaining page purpose and value"
+title: "Titre clair, spécifique et riche en mots-clés"
+description: "Description concise expliquant l'objectif et la valeur de la page"
 ---
 ```
 
-## Content quality standards
+## Normes de qualité du contenu
 
-### Code examples requirements
+### Exigences des exemples de code
 
-- Always include complete, runnable examples that users can copy and execute
-- Show proper error handling and edge case management
-- Use realistic data instead of placeholder values
-- Include expected outputs and results for verification
-- Test all code examples thoroughly before publishing
-- Specify language and include filename when relevant
-- Add explanatory comments for complex logic
-- Never include real API keys or secrets in code examples
+- Incluez toujours des exemples complets et exécutables que les utilisateurs peuvent copier et exécuter
+- Montrez une gestion appropriée des erreurs et des cas limites
+- Utilisez des données réalistes au lieu de valeurs de remplacement
+- Incluez les sorties et résultats attendus pour vérification
+- Testez tous les exemples de code minutieusement avant publication
+- Spécifiez le langage et incluez le nom du fichier si pertinent
+- Ajoutez des commentaires explicatifs pour la logique complexe
+- N'incluez jamais de vraies clés API ou secrets dans les exemples de code
 
-### API documentation requirements
+### Exigences de documentation API
 
-- Document all parameters including optional ones with clear descriptions
-- Show both success and error response examples with realistic data
-- Include rate limiting information with specific limits
-- Provide authentication examples showing proper format
-- Explain all HTTP status codes and error handling
-- Cover complete request/response cycles
+- Documentez tous les paramètres, y compris les optionnels, avec des descriptions claires
+- Montrez des exemples de réponses de succès et d'erreur avec des données réalistes
+- Incluez des informations sur la limitation de débit avec des limites spécifiques
+- Fournissez des exemples d'authentification montrant le format approprié
+- Expliquez tous les codes d'état HTTP et la gestion des erreurs
+- Couvrez les cycles complets de requête/réponse
 
-### Accessibility requirements
+### Exigences d'accessibilité
 
-- Include descriptive alt text for all images and diagrams
-- Use specific, actionable link text instead of "click here"
-- Ensure proper heading hierarchy starting with H2
-- Provide keyboard navigation considerations
-- Use sufficient color contrast in examples and visuals
-- Structure content for easy scanning with headers and lists
+- Incluez un texte alt descriptif pour toutes les images et diagrammes
+- Utilisez un texte de lien spécifique et actionnable au lieu de "cliquez ici"
+- Assurez une hiérarchie de titres appropriée commençant par H2
+- Fournissez des considérations de navigation au clavier
+- Utilisez un contraste de couleur suffisant dans les exemples et visuels
+- Structurez le contenu pour une lecture facile avec des en-têtes et des listes
 
-## Component selection logic
+## Logique de sélection des composants
 
-- Use **Steps** for procedures and sequential instructions
-- Use **Tabs** for platform-specific content or alternative approaches
-- Use **CodeGroup** when showing the same concept in multiple programming languages
-- Use **Accordions** for progressive disclosure of information
-- Use **RequestExample/ResponseExample** specifically for API endpoint documentation
-- Use **ParamField** for API parameters, **ResponseField** for API responses
-- Use **Expandable** for nested object properties or hierarchical information
+- Utilisez **Steps** pour les procédures et instructions séquentielles
+- Utilisez **Tabs** pour le contenu spécifique à une plateforme ou les approches alternatives
+- Utilisez **CodeGroup** pour montrer le même concept dans plusieurs langages de programmation
+- Utilisez **Accordions** pour la divulgation progressive d'informations
+- Utilisez **RequestExample/ResponseExample** spécifiquement pour la documentation des points d'accès API
+- Utilisez **ParamField** pour les paramètres API, **ResponseField** pour les réponses API
+- Utilisez **Expandable** pour les propriétés d'objets imbriqués ou les informations hiérarchiques
 ````

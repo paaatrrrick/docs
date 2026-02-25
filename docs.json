@@ -14,7 +14,7 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Pour commencer",
             "pages": [
               "index",
               "quickstart",
@@ -23,13 +23,13 @@
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Rédaction de contenu",
             "pages": [
               "essentials/images"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Outils IA",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code"
@@ -53,16 +53,16 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Référence API",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Documentation API",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Exemples de points d'accès",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -101,7 +101,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Tableau de bord",
       "href": "https://dashboard.mintlify.com"
     }
   },
