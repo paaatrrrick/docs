@@ -1,0 +1,68 @@
+---
+title: Instructor facilitation coding scheme
+description: A visualization tool for analyzing instructor communication techniques in chemistry education
+---
+
+The [Instructor Facilitation Coding Scheme](https://facilitation-visualization.netlify.app/) is a web-based tool that transforms Excel data into visual representations of instructor facilitation patterns.
+
+## Purpose
+
+This tool helps chemistry education researchers:
+
+- Visualize instructor communication techniques over time
+- Analyze patterns in classroom facilitation
+- Generate high-resolution images for publications and presentations
+
+## How it works
+
+1. Upload an Excel file containing coded instructor facilitation data
+2. Configure visualization parameters (width, time intervals, check mark frequency)
+3. Double-click the generated image to save it
+
+## Configuration options
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| Width | 4000px | Output image width |
+| Seconds per check mark | 60 | Time interval between tick marks |
+| Check marks until labeled | 10 | Interval between labeled time markers |
+
+## Coding categories
+
+The tool visualizes several categories of instructor behavior:
+
+### Task phases
+
+- **Introduction of task** - Blue bordered rectangles
+- **During task** - Green bordered rectangles  
+- **Closing task** - Orange bordered rectangles
+
+### Communication approaches
+
+- Interactive authoritative
+- Noninteractive authoritative
+- Interactive dialogical
+- Noninteractive dialogical
+
+### Instructor actions
+
+- **Managing** - Squares representing classroom management activities (announcements, directions, encouragement)
+- **Questioning** - Triangles representing different question types (content, non-content, rhetorical)
+- **Relaying** - Circles representing information delivery (answering questions, explaining, giving hints)
+
+### Interaction types
+
+- Instructor-initiated group interaction
+- Instructor-initiated whole class interruption
+- Student-initiated group interaction
+- Student-initiated whole class interruption
+
+## Tech stack
+
+- Vanilla JavaScript
+- [Fabric.js](http://fabricjs.com/) for canvas rendering
+- [read-excel-file](https://www.npmjs.com/package/read-excel-file) for Excel parsing
+
+## Source code
+
+View the project on [GitHub](https://github.com/paaatrrrick/chemistryresearch).
