@@ -7,4 +7,4 @@ context:
   - repo: "paaatrrrick/toolsAI"
 ---
 
-add a page about star wars
+add a page about star warssss
