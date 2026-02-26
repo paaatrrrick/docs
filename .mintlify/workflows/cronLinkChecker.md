@@ -2,8 +2,7 @@
 name: "Star trek cron"
 on:
   cron: "0 9 * * 1"
-automerge: false
+automerge: true
 ---
 
-add a page about star wars
-
+add a page about a star wars character
