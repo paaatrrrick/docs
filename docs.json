@@ -39,6 +39,7 @@
             "group": "Star Wars",
             "pages": [
               "star-wars/introduction",
+              "star-wars/luke-skywalker",
               "star-wars/obi-wan-kenobi",
               "star-wars/darth-vader"
             ]
