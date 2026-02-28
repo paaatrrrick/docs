@@ -49,6 +49,12 @@
               "game-of-thrones/introduction",
               "game-of-thrones/characters"
             ]
+          },
+          {
+            "group": "Harry Potter",
+            "pages": [
+              "harry-potter/introduction"
+            ]
           }
         ]
       },
